@@ -15,5 +15,5 @@ func writeFile(i image.Image) (err error) {
 		return
 	}
 
-	ioutil.WriteFile("output.jpeg", buf.Bytes(), 0777)
+	return ioutil.WriteFile("output.jpeg", buf.Bytes(), 0777)
 }
