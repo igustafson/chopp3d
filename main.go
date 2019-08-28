@@ -1,9 +1,7 @@
 package main
 
 import (
-	"bytes"
 	"fmt"
-<<<<<<< HEAD
 )
 
 func main() {
@@ -21,19 +19,4 @@ func main() {
 	}
 
 	return
-=======
-	"image"
-	_ "image/gif"
-	_ "image/jpeg"
-	_ "image/png"
-	"io/ioutil"
-)
-
-func main() {
-	b, _ := ioutil.ReadFile("./stock_image.jpg")
-	fmt.Println(b)
-	img, _, _ := image.Decode(bytes.NewReader(b))
-
-	fmt.Println(img.Bounds())
->>>>>>> e72efdbd3465754daef68fb1d9cfc3da9fb1b1a3
 }
