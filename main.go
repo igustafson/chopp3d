@@ -11,12 +11,22 @@ func main() {
 		return
 	}
 
-	// TODO: Add a secret message
+	imgWithMessage := HideMessage("this is a secret message", img)
 
-	err = writeFile(img)
+	err = writeFile(imgWithMessage)
 	if err != nil {
 		fmt.Println(err)
 	}
+
+	imgWithMessage, err = readImage("./stock_image.jpg")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	message := ReadMessage(imgWithMessage)
+
+	fmt.Println(message)
 
 	return
 }

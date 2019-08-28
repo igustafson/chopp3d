@@ -1,4 +1,4 @@
-package hider
+package main
 
 func HideMessage(msg string, jpg []byte) []byte {
 	return append(jpg, []byte(msg)...)

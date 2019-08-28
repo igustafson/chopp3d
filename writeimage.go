@@ -7,8 +7,9 @@ import (
 	"io/ioutil"
 )
 
-func writeFile(i image.Image) (err error) {
+func writeFile(b []byte) (err error) {
 	buf := new(bytes.Buffer)
+	image := image.
 
 	err = jpeg.Encode(buf, i, nil)
 	if err != nil {
