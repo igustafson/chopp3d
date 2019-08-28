@@ -1,7 +1,7 @@
 package hider
 
 func HideMessage(msg string, jpg []byte) []byte {
-	return append(jpg, []byte(msg))
+	return append(jpg, []byte(msg)...)
 }
 
 func ReadMessage(jpg []byte) string {
@@ -12,9 +12,9 @@ func ReadMessage(jpg []byte) string {
 			break
 		}
 	}
-	if start < len(jpg) {
-		return string(jpg[start:])
+	if start > 0 && start > len(jpg) {
+		return "No Message."
 	}
 
-	return "No Message."
+	return string(jpg[start:])
 }
