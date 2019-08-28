@@ -18,7 +18,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	imgWithMessage, err = readImage("./stock_image.jpg")
+	imgWithMessage, err = readImage("./output.jpeg")
 	if err != nil {
 		fmt.Println(err)
 		return

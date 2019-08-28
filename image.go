@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func HideMessage(msg string, jpg []byte) []byte {
 	return append(jpg, []byte(msg)...)
 }
@@ -12,7 +14,8 @@ func ReadMessage(jpg []byte) string {
 			break
 		}
 	}
-	if start == 0 && start == len(jpg) {
+	if start == 0 || start == len(jpg) {
+		fmt.Println(start)
 		return "No Message."
 	}
 
