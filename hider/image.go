@@ -12,7 +12,7 @@ func ReadMessage(jpg []byte) string {
 			break
 		}
 	}
-	if start > 0 && start > len(jpg) {
+	if start == 0 && start == len(jpg) {
 		return "No Message."
 	}
 
