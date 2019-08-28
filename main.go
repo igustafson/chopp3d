@@ -3,6 +3,25 @@ package main
 import (
 	"bytes"
 	"fmt"
+<<<<<<< HEAD
+)
+
+func main() {
+	img, err := readImage("./stock_image.jpg")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	// TODO: Add a secret message
+
+	err = writeFile(img)
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	return
+=======
 	"image"
 	_ "image/gif"
 	_ "image/jpeg"
@@ -16,4 +35,5 @@ func main() {
 	img, _, _ := image.Decode(bytes.NewReader(b))
 
 	fmt.Println(img.Bounds())
+>>>>>>> e72efdbd3465754daef68fb1d9cfc3da9fb1b1a3
 }
